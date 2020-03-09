@@ -2,14 +2,15 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import Quiz from './components/quiz';
+import Quiz from './components/Quiz';
+import Results from './components/Results';
 
 function App() {
   const [wizardNumber, setWizardNumber] = useState(undefined)
   return (
     <div className="App">
       <Quiz sendResults={setWizardNumber}/>
-      {wizardNumber}
+      {wizardNumber ? <Results wizardNumber={wizardNumber} /> : undefined}
     </div>
   );
 }
