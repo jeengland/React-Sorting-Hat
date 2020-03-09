@@ -1,3 +1,7 @@
+# Live Site
+
+You can view the finished project [here](https://cocky-williams-b8aa59.netlify.com/)
+
 # React Sorting Hat - Stretch Assignment
 
 Welcome to Hogwarts, the School of Whitchcraft and Wizardy. One of the tools that is used by students of Hogwarts on their first day entering the school is notoriously known as the `Sorting Hat`. Your goal throughout this stretch assignment is to build the `Sorting Hat` using ReactJS.
