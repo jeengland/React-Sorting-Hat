@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Quiz = (props) => {
     const [results, setResults] = useState(undefined);
+    const [notFull, setNotFull] = useState(false);
     const [q1, setQ1] = useState(undefined);
     const [q2, setQ2] = useState(undefined);
     const [q3, setQ3] = useState(undefined);
@@ -36,8 +37,17 @@ const Quiz = (props) => {
     useEffect(() => {
         setResults(q1 + q2 + q3 + q4 + q5 + q6)
     }, [q1, q2, q3, q4, q5, q6])
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        if (results) {
+            props.sendResults(results);
+            setNotFull(false);
+        } else {
+            setNotFull(true);
+        }
+    }
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <p>Which color do you most identify with?</p>
             <div className='options'>
                 <label htmlFor='red'>
@@ -128,6 +138,8 @@ const Quiz = (props) => {
                     Dare
                 </label>
             </div>
+            <button type='submit'>Get my result</button>
+            {notFull ? <p>You must answer all of the questions!</p> : undefined}
         </form>
     )
 }
