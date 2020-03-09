@@ -1,22 +1,36 @@
 import React from 'react';
 
+import History from './History';
+
 const Results = (props) => {
     const wizardNumber = props.wizardNumber;
     if (wizardNumber === Math.floor(Math.random() * 11) + 6) {
         return (
-            <h1>You got Hufflepuff!</h1>
+            <React.Fragment>
+                <h1>You got Hufflepuff!</h1>
+                <History house='Hufflepuff' number={wizardNumber}/>
+            </React.Fragment>
         )
     } else if (wizardNumber === 8) {
         return (
-            <h1>You got Gryffindor!</h1>
+            <React.Fragment>
+                <h1>You got Gryffindor!</h1>
+                <History house='Gryffindor' number={wizardNumber}/>
+            </React.Fragment>
         )
     } else if (wizardNumber === 13) {
         return (
-            <h1>You got Ravenclaw!</h1>
+            <React.Fragment>
+                <h1>You got Ravenclaw!</h1>
+                <History house='Ravenclaw' number={wizardNumber}/>
+            </React.Fragment>
         )
     } else {
         return (
-            <h1>You got Slytherin!</h1>
+            <React.Fragment>
+                <h1>You got Slytherin!</h1>
+                <History house='Slytherin' number={wizardNumber}/>
+            </React.Fragment>
         )
     }
 }
