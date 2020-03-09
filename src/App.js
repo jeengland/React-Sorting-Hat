@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import Quiz from './components/Quiz';
@@ -10,7 +9,7 @@ function App() {
   return (
     <div className="App">
       {wizardNumber ? undefined : <Quiz sendResults={setWizardNumber}/>}
-      {wizardNumber ? <Results wizardNumber={wizardNumber} /> : undefined}
+      {wizardNumber ? <Results wizardNumber={wizardNumber} reset={setWizardNumber}/> : undefined}
     </div>
   );
 }

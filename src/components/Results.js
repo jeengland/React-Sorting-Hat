@@ -15,28 +15,28 @@ const Results = (props) => {
         return (
             <React.Fragment>
                 <h1>You got Hufflepuff!</h1>
-                <History house='Hufflepuff' number={wizardNumber}/>
+                <History house='Hufflepuff' number={wizardNumber} reset={props.reset}/>
             </React.Fragment>
         )
     } else if (wizardNumber === 8) {
         return (
             <React.Fragment>
                 <h1>You got Gryffindor!</h1>
-                <History house='Gryffindor' number={wizardNumber}/>
+                <History house='Gryffindor' number={wizardNumber} reset={props.reset}/>
             </React.Fragment>
         )
     } else if (wizardNumber === 13) {
         return (
             <React.Fragment>
                 <h1>You got Ravenclaw!</h1>
-                <History house='Ravenclaw' number={wizardNumber}/>
+                <History house='Ravenclaw' number={wizardNumber} reset={props.reset}/>
             </React.Fragment>
         )
     } else {
         return (
             <React.Fragment>
                 <h1>You got Slytherin!</h1>
-                <History house='Slytherin' number={wizardNumber}/>
+                <History house='Slytherin' number={wizardNumber} reset={props.reset}/>
             </React.Fragment>
         )
     }

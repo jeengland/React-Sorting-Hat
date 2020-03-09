@@ -30,6 +30,7 @@ const History = (props) => {
                 <li>{name5}</li>
                 <li>{name6}</li>
             </ul>
+            <button onClick={() => props.reset(undefined)}>Take the quiz again!</button>
         </React.Fragment>
     )
 }
