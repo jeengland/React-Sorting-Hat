@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 import names from '../assets/wizard_names.json';
 
+import './History.css'
+
 const History = (props) => {
     const [name1, setName1] = useState('');
     const [name2, setName2] = useState('');

@@ -1,0 +1,10 @@
+li {
+    width: 10%;
+    margin: 0 auto;
+}
+
+@media ( max-width: 500px ) {
+    li {
+        width: 50%;
+    }
+} 
