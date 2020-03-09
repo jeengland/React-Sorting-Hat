@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import './Quiz.css';
+
 const Quiz = (props) => {
     const [results, setResults] = useState(undefined);
     const [notFull, setNotFull] = useState(false);
@@ -48,6 +50,7 @@ const Quiz = (props) => {
     }
     return (
         <form onSubmit={handleSubmit}>
+            <h1>Wizard Quiz</h1>
             <p>Which color do you most identify with?</p>
             <div className='options'>
                 <label htmlFor='red'>

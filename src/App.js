@@ -9,7 +9,7 @@ function App() {
   const [wizardNumber, setWizardNumber] = useState(undefined)
   return (
     <div className="App">
-      <Quiz sendResults={setWizardNumber}/>
+      {wizardNumber ? undefined : <Quiz sendResults={setWizardNumber}/>}
       {wizardNumber ? <Results wizardNumber={wizardNumber} /> : undefined}
     </div>
   );
